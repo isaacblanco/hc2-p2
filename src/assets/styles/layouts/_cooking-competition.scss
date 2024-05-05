@@ -1,3 +1,82 @@
-.competition {
-  border: 0;
+.section-hero {
+  align-items: flex-end;
+  background: url(./../images/cover-competition.jpg);
+  background-size: cover;
+  background-position: left center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  min-height: 400px;
+  padding: 12px 120px 12px 0;
+
+  h1 {
+    background-color: rgba(map-get($colors, "light"), 0.4);
+    font-size: 2.5rem;
+    max-width: 400px;
+    padding: 0 12px;
+    text-align: right;
+    text-shadow: 0px 4px 4px rgba(map-get($colors, "light"), 0.8);
+  }
+}
+
+.idarticleCover {
+  align-items: flex-end;
+  background: url(./../images/article-cover.jpg);
+  background-size: cover;
+  background-position: left center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  min-height: 400px;
+  padding: 12px 120px 12px 0;
+
+  h1 {
+    background-color: rgba(map-get($colors, "light"), 0.8);
+    font-size: 2.5rem;
+    max-width: 400px;
+    padding: 0 12px;
+    text-align: right;
+    text-shadow: 0px 4px 4px rgba(map-get($colors, "light"), 0.8);
+  }
+
+  p {
+    background-color: rgba(map-get($colors, "light"), 0.6);
+    padding: 0 12px;
+    text-align: right;
+  }
+}
+
+@include respond-to("medium") {
+  .section-hero {
+    padding: 12px 20px 12px 0;
+    align-items: center;
+
+    h1 {
+      background-color: rgba(map-get($colors, "light"), 0.7);
+      font-size: 2rem;
+      text-shadow: 0px 4px 4px rgba(map-get($colors, "light"), 0.9);
+    }
+
+    h1,
+    p {
+      text-align: center;
+    }
+  }
+}
+@include respond-to("small") {
+  .section-hero {
+    align-items: center;
+    padding: 12px 0 12px 0;
+
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    h1,
+    p {
+      text-align: center;
+    }
+  }
 }

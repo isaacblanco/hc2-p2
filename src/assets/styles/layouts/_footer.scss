@@ -1,9 +1,10 @@
 /* --- FOOTER ----------*/
 .footer {
-  display: flex;
   align-items: center;
+  bottom: 0;
   background-color: map-get($colors, "dark");
   color: map-get($colors, "light");
+  display: flex;
 
   justify-content: space-between;
   padding: 8px 20px 12px;

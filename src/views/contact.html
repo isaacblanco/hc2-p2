@@ -1,0 +1,81 @@
+<h2 id="contact">Inscripción</h2>
+<form action="javascript:return false;">
+  <fieldset class="form-section">
+    <legend>Información Personal</legend>
+    <div class="form-row">
+      <div class="form-item s50">
+        <label for="firstName" class="required">Nombre:</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          pattern="[A-Za-z'-]{3,64}"
+          required
+          placeholder="Nombre"
+        />
+      </div>
+      <div class="form-item s50">
+        <label for="lastName" class="required">Apellidos:</label>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          pattern="[A-Za-z'-]{3,128}"
+          required
+          placeholder="Apellidos"
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-item s50">
+        <label for="email" class="required">Correo Electrónico:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="E-mail"
+        />
+      </div>
+      <div class="form-item s50">
+        <label for="phone">Teléfono:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Teléfono de contacto"
+        />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-item s50">
+        <label for="birthday" class="required">Fecha de nacimiento:</label>
+        <input type="date" id="birthday" name="birthday" required />
+      </div>
+    </div>
+  </fieldset>
+
+  <div class="form-row">
+    <div class="form-item s100">
+      <label for="comments">Comentarios o Peticiones especiales</label>
+
+      <textarea id="comments" name="comments"></textarea>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-item">
+      <label for="terms" class="required inlineB">
+        <input type="checkbox" id="terms" name="terms" required />
+        He leído y acepto los <a href="">términos y condiciones</a> y la
+        <a href="">política de privacidad</a></label
+      >
+    </div>
+  </div>
+
+  <div class="form-row">
+    <button type="submit">Inscribirse</button>
+  </div>
+</form>

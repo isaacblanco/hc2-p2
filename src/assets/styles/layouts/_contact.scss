@@ -1,3 +1,71 @@
-.contact {
+fieldset {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rbga(map-get($colors, "medium"), 0.7);
+  border-radius: 4px;
+}
+
+legend {
+  color: map-get($colors, "medium");
+}
+
+.form-row .form-item {
+  box-sizing: border-box;
+  padding: 6px 4px;
+}
+
+.form-item > label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select {
+  border: 1px solid rgba(map-get($colors, "dark"), 0.3);
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+}
+
+button {
+  background-color: map-get($colors, "major");
   border: 0;
+  border-radius: 3px;
+  color: map-get($colors, "light");
+  padding: 6px 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: map-get($colors, "minor");
+  color: map-get($colors, "light");
+  cursor: pointer;
+}
+
+textarea {
+  border: 1px solid rgba(map-get($colors, "dark"), 0.3);
+  border-radius: 4px;
+  min-height: 90px;
+  width: 100%;
+}
+
+.s100 {
+  flex-grow: 1;
+}
+
+.s50 {
+  flex-grow: 0.5;
+  max-width: 50%;
+}
+
+.s33 {
+  flex-grow: 0.33;
+}
+
+.s25 {
+  flex-grow: 0.25;
 }

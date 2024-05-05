@@ -1,3 +1,136 @@
 .article {
-  border: 0;
+  img {
+    max-width: 100%;
+  }
+}
+
+#articleCover {
+  align-items: flex-end;
+  background: url(./../images/article-cover.jpg);
+  background-size: cover;
+  background-position: left center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  min-height: 400px;
+  padding: 12px 120px 12px 0;
+
+  h1 {
+    background-color: rgba(map-get($colors, "light"), 0.8);
+    font-size: 2.5rem;
+    max-width: 400px;
+    padding: 0 12px;
+    text-align: right;
+    text-shadow: 0px 4px 4px rgba(map-get($colors, "light"), 0.8);
+  }
+
+  p {
+    background-color: rgba(map-get($colors, "light"), 0.6);
+    padding: 0 12px;
+    text-align: right;
+  }
+}
+
+.row {
+  align-items: center;
+  padding: 0 12px;
+
+  quote {
+    font-style: italic;
+    font-size: xx-large;
+    font-family: serif;
+    text-align: center;
+  }
+}
+
+.article__section {
+  padding: 0 24px;
+
+  a {
+    background-color: map-get($colors, "major");
+    color: map-get($colors, "light");
+    display: block;
+    margin: 0 auto;
+    max-width: 220px;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    background-color: map-get($colors, "minor");
+    cursor: pointer;
+  }
+}
+
+.section-lista {
+  ol {
+    list-style: none;
+    counter-reset: li;
+    padding-left: 60px;
+
+    li {
+      counter-increment: li;
+      position: relative;
+    }
+
+    li::before {
+      content: counter(li);
+      position: absolute;
+      left: -40px;
+      font-size: 1em;
+      border: 2px solid rgba(map-get($colors, "dark"), 0.9);
+      color: rgba(map-get($colors, "dark"), 0.9);
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      line-height: 24px;
+    }
+  }
+}
+
+@include respond-to("medium") {
+  .article {
+    &__section {
+      padding: 0 24px;
+    }
+  }
+
+  #articleCover {
+    padding: 12px 20px 12px 0;
+    align-items: center;
+
+    h1 {
+      background-color: rgba(map-get($colors, "light"), 0.7);
+      font-size: 2rem;
+      text-shadow: 0px 4px 4px rgba(map-get($colors, "light"), 0.9);
+    }
+
+    h1,
+    p {
+      text-align: center;
+    }
+  }
+}
+@include respond-to("small") {
+  .article__section {
+    padding: 0 12px;
+  }
+
+  #articleCover {
+    align-items: center;
+    padding: 12px 0 12px 0;
+
+    h1 {
+      font-size: 1.6rem;
+    }
+
+    h1,
+    p {
+      text-align: center;
+    }
+  }
 }

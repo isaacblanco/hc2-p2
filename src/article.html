@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Articulo</title>
+    <title>Artículo</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
@@ -24,18 +24,18 @@
 
     <main class="main">
       <article class="article">
-        <div id="Cover">
+        <div id="articleCover">
           <h1>Como el microondas nos salva la vida a los Rodriguez</h1>
-          <span class="author">por Armando Guerra</span>
+          <p>por Armando Guerra</p>
         </div>
 
-        <div class="container">
-          <section>
-            <quote
+        <section class="article__section container">
+          <div class="row">
+            <quote class="col-lg-6 col-md-6 col-sm-12"
               >El microondas: el aliado perfecto en la cocina de cada
               Rodríguez</quote
             >
-            <p>
+            <p class="col-lg-6 col-md-6 col-sm-12">
               Cocinar nunca ha sido tan sencillo y rápido como con un
               microondas. Para aquellos hombres que llevan el delantal en casa,
               conocidos cariñosamente como “Rodríguez”, este electrodoméstico se
@@ -43,11 +43,11 @@
               complicadas y tiempos de espera interminables; el microondas es
               sinónimo de comodidad y eficiencia.
             </p>
-          </section>
+          </div>
+        </section>
 
-          <hr />
-
-          <section>Lista de ventajas</section>
+        <section class="article__section container section-lista">
+          <h2>Lista de ventajas</h2>
           <ol type="1">
             <li>
               <strong>Rapidez</strong>
@@ -79,43 +79,42 @@
               </p>
             </li>
           </ol>
+        </section>
 
-          <hr />
-        </div>
+        <img
+          src="./assets/images/versus.png"
+          alt="Microondas vs. freidoras de aire, ilustración"
+        />
 
-        <div>imagen</div>
+        <section class="article__section container">
+          <h2>
+            Auge y crecimiento de las freidoras de aire frente a los microondas
+          </h2>
+          <p>
+            Las freidoras de aire han ganado popularidad por su capacidad de
+            cocinar alimentos con menos aceite, pero ¿pueden realmente competir
+            con la versatilidad y rapidez del microondas? Aunque las freidoras
+            ofrecen una alternativa más saludable para freír, el microondas
+            sigue siendo insuperable en cuanto a conveniencia y variedad de
+            funciones.
+          </p>
+        </section>
 
-        <div class="container">
-          <section>
-            <h2>
-              Auge y crecimiento de las freidoras de aire frente a los
-              microondas
-            </h2>
-            <p>
-              Las freidoras de aire han ganado popularidad por su capacidad de
-              cocinar alimentos con menos aceite, pero ¿pueden realmente
-              competir con la versatilidad y rapidez del microondas? Aunque las
-              freidoras ofrecen una alternativa más saludable para freír, el
-              microondas sigue siendo insuperable en cuanto a conveniencia y
-              variedad de funciones.
-            </p>
-          </section>
-
-          <section>
-            <h2>Participa en nuestro concurso de cocina con microondas</h2>
-            <p>
-              ¿Crees que tienes lo que se necesita para ser un maestro de la
-              cocina con microondas? ¡Demuéstralo participando en nuestro
-              concurso! Es tu oportunidad de mostrar tus habilidades culinarias
-              y ganar fabulosos premios. Cocina fácil, rápida y deliciosa: eso
-              es lo que prometemos en nuestro concurso de cocina con microondas.
-            </p>
-            <p>
-              ¡Anímate y muestra al mundo que los Rodríguez también pueden ser
-              chefs de primera con la ayuda de un microondas!
-            </p>
-          </section>
-        </div>
+        <section class="article__section container">
+          <h2>Participa en nuestro concurso de cocina con microondas</h2>
+          <p>
+            ¿Crees que tienes lo que se necesita para ser un maestro de la
+            cocina con microondas? ¡Demuéstralo participando en nuestro
+            concurso! Es tu oportunidad de mostrar tus habilidades culinarias y
+            ganar fabulosos premios. Cocina fácil, rápida y deliciosa: eso es lo
+            que prometemos en nuestro concurso de cocina con microondas.
+          </p>
+          <p>
+            ¡Anímate y muestra al mundo que los Rodríguez también pueden ser
+            chefs de primera con la ayuda de un microondas!
+          </p>
+          <a href="cooking-competition.html">Inscribete</a>
+        </section>
       </article>
     </main>
 

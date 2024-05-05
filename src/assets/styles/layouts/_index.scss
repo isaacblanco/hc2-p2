@@ -16,7 +16,8 @@
   width: 100%;
 
   &__zona1 {
-    background-color: map-get($colors, "light");
+    background-color: rgba(map-get($colors, "light"), 0.9);
+    border-radius: 24px 0 0 0;
 
     h1 {
       line-height: 1.2em;
@@ -24,7 +25,8 @@
   }
 
   &__zona2 {
-    background-color: map-get($colors, "light");
+    background-color: rgba(map-get($colors, "light"), 0.9);
+    border-radius: 0 24px 24px 0;
     color: map-get($colors, "dark");
     padding: 6px 12px;
 
@@ -34,7 +36,8 @@
   }
 
   &__zona3 {
-    background-color: map-get($colors, "light");
+    background-color: rgba(map-get($colors, "light"), 0.9);
+    border-radius: 0 0 0 24px;
     text-align: center;
 
     a {
