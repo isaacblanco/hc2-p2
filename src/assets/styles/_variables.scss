@@ -1,12 +1,42 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
+$base-font-size: 16px;
+
+$font-titles: "Abril Fatface", serif;
+$font-family-sans-serif: poppins, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$colors: (
+  "medium": #606c38,
+  "dark": #283618,
+  "light": #fefae0,
+  "major": #dda15e,
+  "minor": #bc6c25,
+  "danger": #81a28b,
+);
 
+// $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+
+// Espaciado
+$padding-section: 12px;
+
+// Animaciones y estilos
+$transition-default: all 0.3s ease;
+
+// Medios
 $mqMinWidth: 420px;
+$mqMedWidth: 768px;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (max-width: $mqMinWidth) {
+      @content;
+    }
+  } @else if $breakpoint == "medium" {
+    @media (max-width: $mqMedWidth) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+#chef {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 3%;
+}
+
+.cat-chef {
+  // background-color: rgba(map-get($colors, "bg"), 0.85);
+  flex: 1 1 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 24px;
+
+  img {
+    width: 100%;
+    min-height: 40px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  h2 {
+    margin: 10px 0 0;
+  }
+
+  p {
+    padding: 0 8px;
+  }
+}
+
+// Reglas para pantallas medium
+@include respond-to("medium") {
+  .cat-chef {
+    flex: 1 1 40%; // dos por fila
+    margin: 8px 4px;
+    gap: 8px;
+  }
+}
+
+// Reglas para pantallas small
+@include respond-to("small") {
+  .cat-chef {
+    flex: 1 1 100%; // Uno por fila
+    margin: 0 12px 16px 12px;
+    gap: 0;
+  }
+}

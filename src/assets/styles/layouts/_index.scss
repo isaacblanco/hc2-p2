@@ -1,0 +1,98 @@
+.cover {
+  background-image: url("./../images/home-cover.jpg");
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto 24px;
+  max-width: 100%;
+  min-height: 469px;
+
+  padding-top: 60px;
+}
+
+.grid {
+  margin: 24px auto 0;
+  max-width: 968px;
+  min-height: 420px;
+  width: 100%;
+
+  &__zona1 {
+    background-color: map-get($colors, "light");
+
+    h1 {
+      line-height: 1.2em;
+    }
+  }
+
+  &__zona2 {
+    background-color: map-get($colors, "light");
+    color: map-get($colors, "dark");
+    padding: 6px 12px;
+
+    p strong {
+      font-weight: 600;
+    }
+  }
+
+  &__zona3 {
+    background-color: map-get($colors, "light");
+    text-align: center;
+
+    a {
+      background-color: map-get($colors, "major");
+      color: map-get($colors, "light");
+
+      padding: 6px 12px;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    a:hover {
+      background-color: map-get($colors, "minor");
+      cursor: pointer;
+    }
+  }
+}
+
+@supports (display: grid) {
+  .grid {
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: stretch;
+    justify-items: stretch;
+
+    grid-template-areas:
+      " . . zona1 zona1 . . "
+      " . . . zona2 zona2 zona2 "
+      " . . zona3 zona3 . .";
+
+    @include respond-to("medium") {
+      grid-template-areas:
+        " . . zona1 zona1 zona1 ."
+        " . . zona2 zona2 zona2 . "
+        " . . zona3 zona3 zona3 .";
+    }
+
+    @include respond-to("small") {
+      @include respond-to("medium") {
+        grid-template-areas:
+          " . zona1 zona1 zona1 zona1 ."
+          " . zona2 zona2 zona2 zona2 . "
+          " . zona3 zona3 zona3 zona3 .";
+      }
+    }
+
+    padding-top: 0;
+
+    &__zona1 {
+      grid-area: zona1;
+    }
+    &__zona2 {
+      grid-area: zona2;
+    }
+    &__zona3 {
+      grid-area: zona3;
+    }
+  }
+}

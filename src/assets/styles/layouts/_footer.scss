@@ -1,0 +1,72 @@
+/* --- FOOTER ----------*/
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: map-get($colors, "dark");
+  color: map-get($colors, "light");
+
+  justify-content: space-between;
+  padding: 8px 20px 12px;
+
+  &__span__logo {
+    max-width: 80px;
+  }
+
+  > span {
+    display: block;
+    flex: 1;
+  }
+
+  &__links ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin: 0 10px;
+
+      a {
+        color: map-get($colors, "major");
+      }
+    }
+  }
+
+  &__social {
+    text-align: right;
+    a {
+      color: map-get($colors, "major");
+      margin: 0 5px;
+    }
+  }
+
+  a:hover {
+    color: map-get($colors, "light");
+    text-decoration: none;
+  }
+}
+
+@include respond-to("medium") {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__links ul {
+    justify-content: center;
+  }
+}
+
+@include respond-to("small") {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+
+    ul {
+      display: block;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+  }
+}

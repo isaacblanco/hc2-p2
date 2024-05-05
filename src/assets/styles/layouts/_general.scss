@@ -1,0 +1,31 @@
+* {
+  // box-sizing: border-box;
+}
+
+body {
+  background-color: map-get($colors, "light");
+  color: map-get($colors, "primary");
+  font-family: $font-family-sans-serif;
+  font-size: $base-font-size;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: map-get($colors, "medium");
+  text-align: center;
+}
+
+.container {
+  max-width: 968px;
+  margin: 24px auto;
+  // padding: 12px;
+
+  @include respond-to("medium") {
+    width: 100%;
+    // padding: 24px;
+  }
+}
