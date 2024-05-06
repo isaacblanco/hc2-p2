@@ -8,6 +8,11 @@ legend {
   color: map-get($colors, "medium");
 }
 
+.form-row {
+  display: flex;
+  justify-content: space-around;
+}
+
 .form-row .form-item {
   box-sizing: border-box;
   padding: 6px 4px;
@@ -18,16 +23,23 @@ legend {
   margin-bottom: 6px;
 }
 
-input[type="text"],
-input[type="date"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
+input:is(
+    [type="text"],
+    [type="date"],
+    [type="email"],
+    [type="tel"],
+    [type="number"]
+  ),
 select {
   border: 1px solid rgba(map-get($colors, "dark"), 0.3);
   border-radius: 4px;
   padding: 8px;
   width: 100%;
+}
+
+// pseudo clases
+button :is(.focus, :focus) {
+  border: 1px dashed map-get($colors, "dark");
 }
 
 button {
@@ -53,19 +65,34 @@ textarea {
   width: 100%;
 }
 
+// No se usa
 .s100 {
   flex-grow: 1;
 }
 
 .s50 {
-  flex-grow: 0.5;
-  max-width: 50%;
+  flex-grow: 0.45;
+  max-width: 45%;
 }
 
+// No se usa
 .s33 {
-  flex-grow: 0.33;
+  flex-grow: 0.3;
 }
 
+// No se usa
 .s25 {
-  flex-grow: 0.25;
+  flex-grow: 0.22;
+}
+
+@include respond-to("small") {
+  .form-row {
+    flex-direction: column;
+  }
+
+  // Ajuste para pequeñas resoluciones
+  .s50 {
+    flex-grow: 1;
+    max-width: 95%;
+  }
 }

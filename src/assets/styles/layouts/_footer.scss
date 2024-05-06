@@ -5,7 +5,7 @@
   background-color: map-get($colors, "dark");
   color: map-get($colors, "light");
   display: flex;
-
+  flex-shrink: 0;
   justify-content: space-between;
   padding: 8px 20px 12px;
 

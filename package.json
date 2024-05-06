@@ -23,15 +23,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uoc-advanced-html-css/uoc-boilerplate.git"
+    "url": "git+https://github.com/isaacblanco/hc2-p2.git"
   },
   "author": {
-    "name": "Jordi Tarrida",
-    "email": "jorditarrida@uoc.edu"
+    "name": "Isaac Blanco (tras boilerplate de Jordi Tarrida)",
+    "email": "isaacblanco@uoc.edu"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/uoc-advanced-html-css/uoc-boilerplate/issues"
+    "url": "https://github.com/isaacblanco/hc2-p2/issues"
   },
   "homepage": "https://github.com/uoc-advanced-html-css/uoc-boilerplate#readme",
   "devDependencies": {
@@ -43,5 +43,12 @@
     "posthtml-include": "^1.7.4",
     "rimraf": "^5.0.1",
     "sharp": "^0.31.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-regular-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2"
   }
 }

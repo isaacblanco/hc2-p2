@@ -2,6 +2,10 @@
   img {
     max-width: 100%;
   }
+
+  > section:last-child {
+    margin-bottom: 24px;
+  }
 }
 
 #articleCover {
@@ -16,19 +20,17 @@
   min-height: 400px;
   padding: 12px 120px 12px 0;
 
-  h1 {
+  #articleCover :is(h1, p) {
     background-color: rgba(map-get($colors, "light"), 0.8);
+    padding: 0 12px;
+    text-align: right;
+  }
+
+  h1 {
     font-size: 2.5rem;
     max-width: 400px;
     padding: 0 12px;
-    text-align: right;
     text-shadow: 0px 4px 4px rgba(map-get($colors, "light"), 0.8);
-  }
-
-  p {
-    background-color: rgba(map-get($colors, "light"), 0.6);
-    padding: 0 12px;
-    text-align: right;
   }
 }
 
@@ -40,7 +42,18 @@
     font-style: italic;
     font-size: xx-large;
     font-family: serif;
+    margin-top: 24px;
     text-align: center;
+  }
+}
+
+@supports (initial-letter: 3) or (-webkit-initial-letter: 3) {
+  quote::first-letter {
+    -webkit-initial-letter: 3;
+    initial-letter: 3;
+    color: map-get($colors, "medium");
+    font-weight: bold;
+    margin-right: 0.2em;
   }
 }
 
@@ -95,8 +108,12 @@
 @include respond-to("medium") {
   .article {
     &__section {
-      padding: 0 24px;
+      margin: 0 24px;
     }
+  }
+
+  section > p {
+    margin: 0 12px;
   }
 
   #articleCover {
@@ -117,7 +134,11 @@
 }
 @include respond-to("small") {
   .article__section {
-    padding: 0 12px;
+    margin: 0 12px;
+  }
+
+  article ssection p {
+    margin: 0 12px;
   }
 
   #articleCover {

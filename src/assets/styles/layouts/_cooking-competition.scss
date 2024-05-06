@@ -49,6 +49,10 @@
 }
 
 @include respond-to("medium") {
+  section.container p {
+    margin: 0 18px;
+  }
+
   .section-hero {
     padding: 12px 20px 12px 0;
     align-items: center;
