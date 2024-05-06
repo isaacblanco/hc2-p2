@@ -1,38 +1,42 @@
-* {
-  box-sizing: border-box;
-  border: 0;
-}
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    border: 0;
+  }
 
-body {
-  background-color: map-get($colors, "light");
-  color: map-get($colors, "primary");
-  display: flex;
-  flex-direction: column;
-  font-family: $font-family-sans-serif;
-  font-size: $base-font-size;
-  margin: 0;
-  height: 100vh;
-  padding: 0;
+  body {
+    background-color: map-get($colors, "light");
+    color: map-get($colors, "primary");
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family-sans-serif;
+    font-size: $base-font-size;
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+  }
+  // Por usar un ejemplo de where
+  :where(h1, h2, h3, h4) {
+    color: map-get($colors, "medium");
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: $font-titles;
+    text-align: center;
+  }
 }
 
 .site-content {
   flex: 1 0 auto; // Fondo abajo en index
 }
 
-// Por usar un ejemplo de where
-:where(h1, h2, h3, h4) {
-  color: map-get($colors, "medium");
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: $font-titles;
-  text-align: center;
-}
-
 a {
+  border-radius: 4px;
   color: map-get($colors, "major");
 }
 
