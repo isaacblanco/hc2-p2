@@ -47,11 +47,10 @@ a:hover {
 
 @supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
   p::first-letter {
-    -webkit-initial-letter: 1.5;
-    initial-letter: 1.5;
+    -webkit-initial-letter: 1;
+    initial-letter: 1;
     color: map-get($colors, "medium");
     font-weight: bold;
-    margin-right: 0.2em;
   }
 }
 
